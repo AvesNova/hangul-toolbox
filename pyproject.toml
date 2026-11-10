@@ -1,0 +1,42 @@
+[project]
+name = "hangul-toolbox"
+version = "0.1.0"
+description = "Toolbox for building Korean vocabulary data: frequency lists, merged word lists, minimal-pair search, and LLM/TTS-generated Anki decks."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+    "anthropic>=0.72.0",
+    "genanki>=0.13.1",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+# Local TTS via Qwen3-TTS. Requires a CUDA-capable GPU for reasonable speed.
+qwen = ["qwen-tts", "soundfile", "torch"]
+# Browser automation for scraping the frequency list.
+scrape = ["selenium>=4.38.0"]
+
+[project.scripts]
+hanbox = "hanbox.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hanbox"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

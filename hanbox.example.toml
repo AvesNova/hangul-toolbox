@@ -1,0 +1,25 @@
+# Copy to `hanbox.toml` to set project defaults, or point at any file
+# with `--config`. Every key is optional and mirrors a CLI flag; CLI flags
+# win over this file. Credentials do NOT belong here — see .env.example.
+
+[pipeline]
+input = "data/topik_words.csv"
+output_dir = "output"
+levels = ["A", "B"]   # omit for all levels
+limit = 0             # 0 = no limit
+chunks = 3
+
+[llm]
+provider = "anthropic"        # anthropic | openai
+model = "claude-opus-4-8"
+# base_url = "http://localhost:11434/v1"   # openai provider only
+batch_size = 25
+
+[tts]
+provider = "qwen"             # qwen | openai
+# model = "tts-1"
+# base_url = "http://localhost:8880/v1"
+voices = ["sohee", "aiden", "vivian"]
+
+[export]
+deck_name = "TOPIK Vocabulary"

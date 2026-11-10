@@ -1,0 +1,16 @@
+# secrets / local config
+.env
+hanbox.toml
+
+# generated output and downloaded data
+output/
+data/external/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+dist/
+*.egg-info/
