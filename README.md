@@ -105,6 +105,10 @@ single package with one `hanbox` CLI and tests. The earlier work lived in a
 scratch repository with unstructured history, so this repository starts fresh
 from the consolidated code.
 
+## AI assistance
+
+This project was built with the assistance of AI tools.
+
 ## License
 
 MIT
