@@ -96,6 +96,15 @@ src/hanbox/
 └── similar/      # pairs.py
 ```
 
+## History
+
+This project grew out of personal Korean-study scripts written from November
+2025 onward: a frequency-list scraper, TOPIK and textbook word-list cleaning,
+and a TOPIK-to-Anki pipeline. In November 2026 they were consolidated into this
+single package with one `hanbox` CLI and tests. The earlier work lived in a
+scratch repository with unstructured history, so this repository starts fresh
+from the consolidated code.
+
 ## License
 
 MIT
