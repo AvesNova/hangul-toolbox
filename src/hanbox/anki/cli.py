@@ -75,7 +75,7 @@ def register(subparsers: argparse._SubParsersAction) -> None:
     )
     llm_args.add_argument(
         "--llm-model",
-        help="Model ID (default: claude-opus-4-8 for anthropic; required for openai)",
+        help="Model ID (default: claude-sonnet-5-5 for anthropic; required for openai)",
     )
     llm_args.add_argument(
         "--llm-base-url",

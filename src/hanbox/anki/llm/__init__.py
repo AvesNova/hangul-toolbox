@@ -19,7 +19,7 @@ def create_llm(
     """Instantiate an LLM backend by provider name.
 
     Providers:
-        anthropic  — Claude via the official SDK (default model claude-opus-4-8)
+        anthropic  — Claude via the official SDK (default model claude-sonnet-5-5)
         openai     — any OpenAI-compatible /chat/completions endpoint
     """
     if provider == "anthropic":

@@ -6,7 +6,7 @@ import anthropic
 
 from .base import LLMError
 
-DEFAULT_MODEL = "claude-opus-4-8"
+DEFAULT_MODEL = "claude-sonnet-5-5"
 
 
 class AnthropicLLM:

@@ -11,7 +11,7 @@ chunks = 3
 
 [llm]
 provider = "anthropic"        # anthropic | openai
-model = "claude-opus-4-8"
+model = "claude-sonnet-5-5"
 # base_url = "http://localhost:11434/v1"   # openai provider only
 batch_size = 25
 

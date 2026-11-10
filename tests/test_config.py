@@ -47,10 +47,10 @@ def test_load_missing_config_file_is_empty(tmp_path):
 def test_resolve_precedence_cli_over_file_over_default(tmp_path):
     file_cfg = load_config_file(_write(tmp_path))
     cli = {k: None for k in DEFAULTS}
-    cli["llm_model"] = "claude-opus-4-8"  # explicit flag
+    cli["llm_model"] = "claude-sonnet-5-5"  # explicit flag
 
     settings = resolve(cli, file_cfg)
-    assert settings["llm_model"] == "claude-opus-4-8"  # CLI wins
+    assert settings["llm_model"] == "claude-sonnet-5-5"  # CLI wins
     assert settings["llm_provider"] == "openai"  # file wins over default
     assert settings["batch_size"] == DEFAULTS["batch_size"]  # default survives
     assert settings["limit"] == 100
